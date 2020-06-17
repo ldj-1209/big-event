@@ -8,6 +8,10 @@
     <!-- 引入layui样式 -->
     <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
 
+    <link rel="stylesheet" href="./assets/fonts/iconfont.css">
+
+    <link rel="stylesheet" href="./assets/css/index.css">
+
     <script>
         var mytoken = localStorage.getItem('mytoken')
         if (!mytoken) {
@@ -19,7 +23,83 @@
 
 <body>
 
-    <div>首页</div>
+    <body class="layui-layout-body">
+        <div class="layui-layout layui-layout-admin">
+            <div class="layui-header">
+                <div class="layui-logo">
+                    <img src="./assets/images/logo1.png" alt="">
+                </div>
+                <!-- 头部区域（可配合layui已有的水平导航） -->
+
+                <ul class="layui-nav layui-layout-right">
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 贤心
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;">基本资料</a></dd>
+                            <dd><a href="javascript:;">更换头像</a></dd>
+                            <dd><a href="javascript:;">修改密码</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"><a href="javascript:;"><span class="iconfont icon-tuichu"> </span>&nbsp;
+                            退出</a></li>
+                </ul>
+            </div>
+
+            <div class="layui-side layui-bg-black">
+                <div class="layui-side-scroll">
+                    <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                    <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                        <li class="">
+                            <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                            <span>欢迎 &nbsp;</span>
+                            <span> ldj</span>
+                        </li>
+                        <li class="layui-nav-item layui-nav-itemed layui-this">
+                            <a class="" href="javascript:;"><span class="iconfont icon-home"> </span>&nbsp;首页</a>
+
+                        </li>
+                        <li class="layui-nav-item">
+                            <a href="javascript:;"><span class="iconfont icon-16"> </span>&nbsp;文章管理</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"> &nbsp;</i>文章类别</a></dd>
+                                <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"> &nbsp;</i>文章列表</a></dd>
+                                <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"> &nbsp;</i>发表文章</a></dd>
+
+                            </dl>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a href="javascript:;"><span class="iconfont icon-user"> </span>&nbsp;个人中心</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"> &nbsp;</i>基本资料</a></dd>
+                                <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"> &nbsp;</i>更换头像</a></dd>
+                                <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"> &nbsp;</i>修改密码</a></dd>
+
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="layui-body">
+                <!-- 内容主体区域 -->
+                <div class="layui-body-content">
+                    <iframe src="./home/dashboard.html" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <div class="layui-footer">
+                <!-- 底部固定区域 -->
+                © ldj1209.com - 图书管理系统
+            </div>
+        </div>
+
+        <script src="./assets/lib/jquery.js"></script>
+        <script src="./assets/lib/layui/layui.all.js"></script>
+        <script src="./assets/js/index.js"></script>
+
+    </body>
 </body>
 
 </html>

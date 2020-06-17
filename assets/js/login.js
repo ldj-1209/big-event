@@ -50,6 +50,8 @@ $(function() {
 
 
                         location.href = './index.html'
+                    } else {
+                        layer.msg(res.message + '该用户名未被注册 !')
                     }
                 }
             })
