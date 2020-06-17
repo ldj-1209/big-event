@@ -11,7 +11,7 @@ ul,
 li {
     padding: 0;
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .layui-nav * {
@@ -45,4 +45,5 @@ li {
 
 .layui-footer {
     text-align: center;
+    font-size: 10px;
 }
