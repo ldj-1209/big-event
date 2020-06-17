@@ -73,8 +73,10 @@ $(function() {
             data: formData,
             success: function(res) {
                 if (res.status === 0) {
-                    alert('注册成功')
+                    layer.msg('注册成功')
                     $('#registered .links').click()
+                } else {
+                    layer.msg(res.message)
                 }
             }
         })
