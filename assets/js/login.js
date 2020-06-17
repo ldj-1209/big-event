@@ -4,17 +4,25 @@ $(function() {
     form.verify({
         username: function(value) {
             if (!new RegExp("^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$").test(value)) {
-                return '用户名不能有特殊字符';
+                return '用户名不能有特殊字符!';
             }
             if (/(^\_)|(\__)|(\_+$)/.test(value)) {
-                return '用户名首尾不能出现下划线\'_\'';
+                return '用户名首尾不能出现下划线\'_\'!';
             }
             if (/^\d+\d+\d$/.test(value)) {
-                return '用户名不能全为数字';
+                return '用户名不能全为数字!';
             }
         },
 
-        psw: [/^[\S]{4,12}$/, '密码必须6到12位，且不能出现空格']
+        psw: [/^[\S]{4,12}$/, '密码必须6到12位，且不能出现空格!'],
+
+        same: function(value) {
+            var oldPsw = $('#registered input[name=password]').val()
+
+            if (oldPsw !== value) {
+                return '两次输入的密码不一致!'
+            }
+        }
     })
 
     //  控制登录表单
@@ -73,7 +81,7 @@ $(function() {
             data: formData,
             success: function(res) {
                 if (res.status === 0) {
-                    layer.msg('注册成功')
+                    layer.msg('注册成功!')
                     $('#registered .links').click()
                 } else {
                     layer.msg(res.message)
