@@ -22,7 +22,7 @@
             <img src="./assets/images/login_title.png" alt="">
         </div>
         <!-- 登录表单 -->
-        <form class="layui-form" id="loginForm" style="display: none;">
+        <form class="layui-form" id="loginForm">
             <div class="layui-form-item">
                 <i class="layui-icon layui-icon-username"></i>
                 <input type="text" name="username" required lay-verify="required|username" placeholder="请输入用户名" autocomplete="off" class="layui-input">
@@ -34,7 +34,7 @@
 
             </div>
             <div class="layui-form-item">
-                <button lay-submit class=" layui-btn layui-btn-normal layui-btn-fluid ">登录</button>
+                <button lay-submit class=" layui-btn layui-btn-normal layui-btn-fluid ">立即登录</button>
             </div>
 
 
@@ -43,7 +43,7 @@
         </form>
 
         <!-- 注册表单 -->
-        <form class="layui-form" id="registered">
+        <form class="layui-form" id="registered" style="display: none;">
             <div class="layui-form-item">
                 <i class="layui-icon layui-icon-username"></i>
                 <input type="text" name="username" required lay-verify="required|username" placeholder="请输入用户名" autocomplete="off" class="layui-input">
@@ -56,11 +56,11 @@
             </div>
             <div class="layui-form-item">
                 <i class="layui-icon layui-icon-password"></i>
-                <input type="password" name="password" required lay-verify="required|psw" placeholder="请确认密码" autocomplete="off" class="layui-input">
+                <input type="password" required lay-verify="required|psw" placeholder="请确认密码" autocomplete="off" class="layui-input">
 
             </div>
             <div class="layui-form-item">
-                <button lay-submit class=" layui-btn layui-btn-normal layui-btn-fluid ">注册</button>
+                <button lay-submit class=" layui-btn layui-btn-normal layui-btn-fluid ">立即注册</button>
             </div>
 
 
