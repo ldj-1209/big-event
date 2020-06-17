@@ -8,11 +8,18 @@
     <!-- 引入layui样式 -->
     <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
 
+    <script>
+        var mytoken = localStorage.getItem('mytoken')
+        if (!mytoken) {
+            location.href = './login.html'
+        }
+    </script>
+
 </head>
 
 <body>
 
-
+    <div>首页</div>
 </body>
 
 </html>

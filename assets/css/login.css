@@ -47,6 +47,11 @@ body {
 .links {
     display: flex;
     justify-content: flex-end;
+    cursor: pointer;
+}
+
+.links:hover {
+    color: #636161;
 }
 
 .layui-form-item {

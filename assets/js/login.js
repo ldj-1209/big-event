@@ -14,17 +14,17 @@ $(function() {
             }
         },
 
-        psw: [/^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格']
+        psw: [/^[\S]{4,12}$/, '密码必须6到12位，且不能出现空格']
     })
 
-
+    //  控制登录表单
     $('.layui-form').submit(function(e) {
 
         e.preventDefault();
 
         var formData = $(this).serialize();
 
-        console.log(formData);
+
 
 
         $.ajax({
@@ -35,12 +35,29 @@ $(function() {
                 console.log(res);
 
                 if (res.status === 0) {
-                    console.log(res.status);
+
+                    console.log(res.token);
+
+                    localStorage.setItem('mytoken', res.token);
+
 
                     location.href = './index.html'
                 }
             }
         })
+    })
+
+    //  控制表单切换
+
+    $('#registered .links').click(function() {
+
+        $('#registered').hide()
+        $('#loginForm').show()
+    });
+    $('#loginForm .links').click(function() {
+
+        $('#loginForm').hide()
+        $('#registered').show()
     })
 
 
