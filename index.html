@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="./assets/css/index.css">
 
+    <script src="./assets/lib/jquery.js"></script>
+
     <script>
         var mytoken = localStorage.getItem('mytoken')
         if (!mytoken) {
@@ -34,7 +36,7 @@
                 <ul class="layui-nav layui-layout-right">
                     <li class="layui-nav-item">
                         <a href="javascript:;">
-                            <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 贤心
+                            <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> <span class="username">ldj</span>
                         </a>
                         <dl class="layui-nav-child">
                             <dd><a href="javascript:;">基本资料</a></dd>
@@ -42,7 +44,8 @@
                             <dd><a href="javascript:;">修改密码</a></dd>
                         </dl>
                     </li>
-                    <li class="layui-nav-item"><a href="javascript:;"><span class="iconfont icon-tuichu"> </span>&nbsp;
+                    <li class="layui-nav-item"><a href="javascript:;" id="close-btn"><span class="iconfont icon-tuichu">
+                            </span>&nbsp;
                             退出</a></li>
                 </ul>
             </div>
@@ -54,7 +57,7 @@
                         <li class="">
                             <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
                             <span>欢迎 &nbsp;</span>
-                            <span> ldj</span>
+                            <span class="username"> ldj</span>
                         </li>
                         <li class="layui-nav-item layui-nav-itemed layui-this">
                             <a class="" href="javascript:;"><span class="iconfont icon-home"> </span>&nbsp;首页</a>
@@ -95,7 +98,7 @@
             </div>
         </div>
 
-        <script src="./assets/lib/jquery.js"></script>
+
         <script src="./assets/lib/layui/layui.all.js"></script>
         <script src="./assets/js/index.js"></script>
 
