@@ -8,8 +8,14 @@ $(function() {
             if (res.status === 0) {
 
 
+
                 var username = res.data.username
-                $('.username').html(username)
+                if (res.data.nickname) {
+                    $('.username').html(res.data.nickname)
+                } else {
+                    $('.username').html(username)
+                }
+
 
                 var imgurl = res.data.user_pic
 
