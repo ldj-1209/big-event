@@ -40,7 +40,7 @@ $(function() {
                 url: 'api/login',
                 data: formData,
                 success: function(res) {
-                    console.log(res);
+
 
                     if (res.status === 0) {
 
@@ -51,7 +51,7 @@ $(function() {
 
                         location.href = './index.html'
                     } else {
-                        layer.msg(res.message + '该用户名未被注册 !')
+                        layer.msg(res.message + '账号或密码错误 !')
                     }
                 }
             })
