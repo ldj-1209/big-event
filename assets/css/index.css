@@ -32,6 +32,15 @@ li {
     cursor: pointer;
 }
 
+.layui-side-scroll ul li:first-child span {
+    font-size: 14px;
+}
+
+.layui-side-scroll ul li:first-child img {
+    width: 35px;
+    height: 35px;
+}
+
 .layui-body-content {
     width: 100%;
     height: 100%;
