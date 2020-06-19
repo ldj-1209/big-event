@@ -2,22 +2,24 @@ $(function() {
 
     $.ajax({
         type: 'get',
-        url: 'http://ajax.frontend.itheima.net/my/userinfo',
-        headers: {
-            Authorization: mytoken
-        },
+        url: 'my/userinfo',
+
         success: function(res) {
             if (res.status === 0) {
-                console.log(res);
+
 
                 var username = res.data.username
                 $('.username').html(username)
 
                 var imgurl = res.data.user_pic
+
                 if (imgurl) {
+
                     $('.username').siblings('img').attr('src', imgurl)
                 } else {
-                    $('.username').siblings('img').attr('src', './assets/images/avatar.jpg')
+                    $('.username').siblings('img').attr('src', './assets/images/avatar.jpg');
+
+
                 }
             }
 

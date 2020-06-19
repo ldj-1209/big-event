@@ -26,8 +26,8 @@ li {
 }
 
 .layui-side-scroll ul li:first-child {
-    height: 50px;
-    line-height: 50px;
+    height: 65px;
+    line-height: 65px;
     padding-left: 20px;
     cursor: pointer;
 }
