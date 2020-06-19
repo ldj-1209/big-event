@@ -6,7 +6,7 @@ var baseUrl = 'http://ajax.frontend.itheima.net/'
 
 $.ajaxPrefilter(function(option) {
 
-    console.log(option);
+
 
     option.url = baseUrl + option.url
 
