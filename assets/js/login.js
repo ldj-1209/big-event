@@ -44,12 +44,14 @@ $(function() {
 
                     if (res.status === 0) {
 
-                        console.log(res.token);
+                        layer.msg(res.message)
 
                         localStorage.setItem('mytoken', res.token);
 
 
-                        location.href = './index.html'
+                        setTimeout(function() {
+                            location.href = './index.html'
+                        }, 500)
                     } else {
                         layer.msg(res.message + '账号或密码错误 !')
                     }

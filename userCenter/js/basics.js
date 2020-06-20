@@ -52,8 +52,13 @@ $(function() {
             data: fd,
             success: function(res) {
                 if (res.status === 0) {
+
                     layer.msg('更改成功!')
                     getData()
+
+                    window.parent.transCation();
+
+
 
                 }
             }
@@ -61,6 +66,8 @@ $(function() {
 
 
     })
+
+
 
 
 })

@@ -1,37 +1,6 @@
 $(function() {
 
-    $.ajax({
-        type: 'get',
-        url: 'my/userinfo',
-
-        success: function(res) {
-            if (res.status === 0) {
-
-
-
-                var username = res.data.username
-                if (res.data.nickname) {
-                    $('.username').html(res.data.nickname)
-                } else {
-                    $('.username').html(username)
-                }
-
-
-                var imgurl = res.data.user_pic
-
-                if (imgurl) {
-
-                    $('.username').siblings('img').attr('src', imgurl)
-                } else {
-                    $('.username').siblings('img').attr('src', './assets/images/avatar.jpg');
-
-
-                }
-            }
-
-        }
-    })
-
+    transCation();
 
     // 控制退出事件
     $('#close-btn').click(function() {
@@ -51,3 +20,29 @@ $(function() {
         })
     })
 })
+
+function transCation() {
+    $.ajax({
+        type: 'get',
+        url: 'my/userinfo',
+
+        success: function(res) {
+            if (res.status === 0) {
+
+
+                var username = res.data.nickname || res.data.username
+
+                $('.username').html(username)
+
+                var imgurl = res.data.user_pic || './assets/images/avatar.jpg'
+
+                $('.username').siblings('img').attr('src', imgurl)
+
+
+            }
+
+        }
+    })
+}
+
+$.transCation = transCation;
