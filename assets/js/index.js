@@ -39,6 +39,9 @@ function transCation() {
                 $('.username').siblings('img').attr('src', imgurl)
 
 
+            } else {
+                localStorage.removeItem('mytoken')
+                location.href = './login.html'
             }
 
         }

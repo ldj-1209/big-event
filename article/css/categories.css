@@ -1,0 +1,13 @@
+.layui-card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.layui-card-header button {
+    margin-top: 6px;
+    margin-right: 750px;
+}
+
+.layui-card-header h1 {
+    font-size: 14px;
+}
